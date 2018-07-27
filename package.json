@@ -1,0 +1,24 @@
+{
+  "name": "confusion",
+  "version": "1.0.0",
+  "description": "This is a website for Ristorante Con Fusion",
+  "main": "index.html",
+  "scripts": {
+    "start": "npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server"
+  },
+  "author": "Taylor Graham",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isaidspaghetti/conFusion.git"
+  },
+  "bugs": {
+    "url": "https://github.com/isaidspaghetti/conFusion/issues"
+  },
+  "homepage": "https://github.com/isaidspaghetti/conFusion#readme"
+}
