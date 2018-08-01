@@ -1,0 +1,266 @@
+<GIT Installing>
+    To install Git on your computer, go to https://git-scm.com/downloads to download the Git installer for your specific computing platform.
+    git --version
+    git config --global user.name "your Name"
+    git config --global user.email <your email address>
+    git config --list
+
+
+<GIT Basic Commands>
+    git init <!-- initializes the folder as a git respository -->
+    git status
+    git add .
+    git commit -m "first commit"
+    git remote add origin <bithub URL>
+    git push -u origin master <!-- pushes get to hub -->
+    git clone <bithub URL> <!-- downloads a guit -->
+
+   
+<GIT Checkout>
+    git checkout <commit number> <index.html or other file name> <!-- checks out index.html -->
+    git reset HEAD <filename> <!-- discard effect of previous operation and restore index.html to its state -->
+    git checkout --<filename>  <!-- check in? -->
+    git log --oneline 
+
+
+<GIT Ignore File>
+    .gitignore file - <!-- put in node_modules to ignore in commits -->
+ 
+
+
+<NODE>
+    node -v <!-- returns version of node installed -->
+    npm -v <!-- returns version of npm installed -->
+
+    npm init
+    npm install lite-server --save-dev <!--  use main, repository type git, homepage, start: npm run lite -->
+    npm start
+
+
+<BOOTSTRAP INSTALL>
+    npm install
+    npm install bootstrap@4.0.0 --save
+    npm install jquery@3.3.1 popper.js@1.12.9 --save
+
+<BOOTSTRAP in HTML: initialize>
+    <!-- Paste the following into the head of your HTML -->
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link href="css/styles.css" rel="stylesheet">
+
+    
+
+    <!-- <Paste the following into the Footer -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+    
+
+
+</BOOTSTRAP HTML Basics>
+    <div class="container"> Fixes width on screen
+    <div class="row"> organizes page into rows
+    <header class ="jumbotron"></header>
+    To stack all the columns for use on small screens, for the first row of the stack (column 1), user
+    <div class="order-sm-last">
+        and for the last column use:
+        <div class="order-sm-first">
+    For lists: <div class="col-4 offset-1 col-sm-2">
+            
+
+</BOOTSTRAP>
+
+<CSS>
+        .row-header{
+            margin:0px auto;
+            padding:0px;
+        }
+        
+        .row-content {
+            margin:0px auto;
+            padding: 50px 0px 50px 0px;
+            border-bottom: 1px ridge;
+            min-height:400px;
+        }
+        
+        .footer{
+            background-color: #D1C4E9;
+            margin:0px auto;
+            padding: 20px 0px 20px 0px;
+        }
+        .jumbotron {
+            padding:70px 30px 70px 30px;
+            margin:0px auto;
+            background: #9575CD ;
+            color:floralwhite;
+        }
+        
+        address{
+            font-size:80%;
+            margin:0px;
+            color:#0f0f0f;
+        }
+
+<CSS VERTICAL CENTERING>
+    <!-- for body content -->
+        <div class="row row-content align-items-center">
+    <!-- for footer third column social media links -->
+        <div class="col-12 col-sm-4 align-self-center"></div>
+
+<CSS HORIZONTAL CENTERING>
+        <div class="row justify-content-center">             
+                <div class="col-auto">
+                        <div class="text-center">
+
+</CSS>
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~WEEK TWO~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<NAV BARS>
+    <nav class="navbar navbar-dark navbar-expand-sm bg-primary fixed-top">
+        <div class="container">
+               
+            <!-- For mobile, add a button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                <!-- Then hide the menu using that button -->
+                    <div class="collapse navbar-collapse" id="Navbar">
+                            <ul class="navbar-nav mr-auto"> ... </ul>
+                        </div>   
+
+           <a class="navbar-brand" href="#">Ristorante Con Fusion</a>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./aboutus.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>            
+        </div>
+    </nav>
+    <!-- TO keep the nav bar from covering part of the jumbotron use the following in the CSS -->
+    body{
+        padding:50px 0px 0px 0px;
+        z-index:0;
+    }
+</NAVBAR>
+
+<BREADCRUMBS>
+    <ol class="col-12 breadcrumb">
+            <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+            <li class="breadcrumb-item active">About Us</li>
+        </ol>
+</BREADCRUMBS>
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ICON FONTS!~
+<ICON FONTS DOWNLOAD>
+    Font Awesome - free and awesome
+        npm install font-awesome@4.7.0 --save
+    Bootstrap-social
+        npm install bootstrap-social@5.1.1 --save
+
+<ICON FONTS INITIALIZE>    
+    <!-- Then link the new bootstrap CSS to your html files -->
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+
+ <ICON FONTS HTML> 
+    Use i or span to enter font-awesome into HTML
+    <i class="fa fa-phone"></i>
+    <a class="btn btn-social-icon btn-facebook" href="your URL"><i class=fa fa-facebook></i></a>
+
+~!~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~BUTTONS!~
+<div class="btn-group" role="group">
+    <a role="button" class="btn btn-primary" href="tel:+85212345678"><i class="fa fa-phone"></i> Call</a>
+    <a role="button" class="btn btn-info"><i class="fa fa-skype"></i> Skype</a>
+    <a role="button" class="btn btn-success" href="mailto:confusion@food.net"><i class="fa fa-envelope-o"></i> Email</a>
+</div>
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~FORMS
+<BASIC FORMS>
+    <form>
+        <div class="form-group row">
+            <label for="firstname" class="col-md-2 col-form-label">First Name</label>
+            <div class="col-md-10">
+                <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First Name">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="lastname" class="col-md-2 col-form-label">Last Name</label>
+            <div class="col-md-10">
+                <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last Name">
+            </div>
+        </div>
+    </form>
+</BASIC>
+
+<CONTACT FORMS>
+    <div class="form-group row">
+        <label for="telnum" class="col-12 col-md-2 col-form-label">Contact Tel.</label>
+        <div class="col-5 col-md-3">
+            <input type="tel" class="form-control" id="areacode" name="areacode" placeholder="Area code">
+        </div>
+        <div class="col-7 col-md-7">
+            <input type="tel" class="form-control" id="telnum" name="telnum" placeholder="Tel. number">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="emailid" class="col-md-2 col-form-label">Email</label>
+        <div class="col-md-10">
+            <input type="email" class="form-control" id="emailid" name="emailid" placeholder="Email">
+        </div>
+    </div>
+</CONTACT>
+
+<CHECKBOX FORMS SELECT FORMS>
+    <div class="form-group row">
+        <div class="col-md-6 offset-md-2">
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="approve" id="approve" value="">
+                <label class="form-check-label" for="approve">
+                    <strong>May we contact you?</strong>
+                </label>
+            </div>
+        </div>
+        <div class="col-md-3 offset-md-1">
+            <select class="form-control">
+                <option>Tel.</option>
+                <option>Email</option>
+            </select>
+        </div>
+    </div>
+</CHECKBOX>
+
+<TEXTAREA FORMS>
+    <div class="form-group row">
+        <label for="feedback" class="col-md-2 col-form-label">Your Feedback</label>
+        <div class="col-md-10">
+            <textarea class="form-control" id="feedback" name="feedback" rows="12"></textarea>
+        </div>
+    </div>
+</TEXTAREA>
+
+<SUBMIT BUTTON>
+    <div class="form-group row">
+        <div class="offset-md-2 col-md-10">
+            <button type="submit" class="btn btn-primary">Send Feedback</button>
+        </div>
+    </div>
+</SUBMIT>
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~TABLES and CARDS!!!!!!~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Bootstrap Tables: 
+    table class="table table-striped table b-ordered table-hover table-sm (cuts cell pad in half) 
+        table-responsive(add this to the div container)
+    Table Rows = <tr></tr>
+    Table cells = <td></td>
+    Table backgrounds: <tr class="bg-success"></tr>
+
+Bootstrap Cards:
+
