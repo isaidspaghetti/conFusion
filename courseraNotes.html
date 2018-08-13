@@ -36,6 +36,9 @@
     npm install lite-server --save-dev <!--  use main, repository type git, homepage, start: npm run lite -->
     npm start
 
+    Inside the package.json file, add the following to the scripts section:
+    "scripts": {
+        "start": "npm run lite",
 
 <BOOTSTRAP INSTALL>
     npm install
@@ -315,13 +318,14 @@ Progress bars:
 To trigger a modal use <a class="data-toggle="modal" data-target="#reservationModal" role="button">
 
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~WEEK 4 - JQUERY~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~WEEK 4 - JQUERY~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     
 <JQUERY SELECTORS>
     any html element such as p, button, etc
     #id, "#myCarousel"
     Classes: ".btn", ".btn.btn-default"
-    Attributes: "[href]", "[data-toggle="tooltip"]"
+    Attributes: "[href]", "[data-toggle="tooltip"]
     Current element: $(this).
 </JQUERY>
 
@@ -346,4 +350,18 @@ To trigger a modal use <a class="data-toggle="modal" data-target="#reservationMo
     "lite": "lite-server",
 
     npm run scss
-</SCSS>
+    </SCSS>
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~NPM (MORE)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+use npm to watch you scss or less files and automatically update the css file when changes are made
+    npm install --save-dev onchange@3.3.0 parallellshell@3 class="0 2"
+<in package.json add the following scripts>
+    MAC: "watch:scss": "onchange 'css/*.scss' -- npm run scss",
+    WINDOWS:  "watch:scss": "onchange \"css/*.scss\" -- npm run scss",
+    <!-- script name: on changes to 'css folder/ all (*) scss files' -- run npm run scss on that file= -->
+Also add:
+    MAC: "watch:all": "parallelshell 'npm run watch:scss' 'npm run lite'"
+And Modify the first scripts line to be:
+    "scripts": {
+        "start": "npm run watch:all",
+</in>
