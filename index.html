@@ -30,9 +30,9 @@
                     <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a> </li>
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a> </li>
                 </ul>
-                <!-- button to trigger a modal -->
+<!-- ~~~~~~~~~~~~~~~WEEK 4~~~~~~~~~~~~~~~~~~LOGIN BUTTON TO TRIGGER MODAL -->
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a class="button" id="loginButton">
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -90,11 +90,10 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm align-self-center">
-    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~WEEK 3 ASSIGNMENT ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~WEEK 4 ASSIGNMENT ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
          Reserve button to trigger a modal -->
-                    <a class="btn btn-block btn-warning" href="#reserve" role="button"
-                    data-toggle="modal" data-target="#reservationModal"
-                    data-placement="bottom" >Reserve Table</a>
+                    <a class="btn btn-block btn-warning" role="button"
+                    id="reserveButton" >Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -348,12 +347,7 @@
                             <button type="button" class="btn btn-primary">Reserve</button>
                         </div>
                     
-                    </form>
-                
-                    
-                    
-
-                           
+                    </form>       
                 </div>
                     </div>
                 </div>
@@ -427,9 +421,16 @@
                 $("#carouselButton").children("span").removeClass('fa-play');
                 $("#carouselButton").children("span").addClass('fa-pause');                    
             }
- 
+            
         
         });
+        $("#loginButton").click(function(){
+            $("#loginModal").modal('show');
+        });
+        $("#reserveButton").click(function(){
+            $("#reservationModal").modal('show');
+        }) 
+       
     });
 </script>
 

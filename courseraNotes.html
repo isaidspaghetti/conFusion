@@ -331,3 +331,19 @@ To trigger a modal use <a class="data-toggle="modal" data-target="#reservationMo
     Form: submit change focus, background-color
     Document, window: load, resize, scroll, unload
 </JQUERY>
+
+
+<SCSS & SASS Installs>
+    npm install --save-dev node-sass@4.7.2
+
+    in package.json, add the last line shown here:
+    "devDependencies": {
+        "lite-server": "^2.4.0",
+        "node-sass": "^4.7.2"
+    Then add 
+    "scss": "node-sass -o css/ css/" 
+    under 
+    "lite": "lite-server",
+
+    npm run scss
+</SCSS>
