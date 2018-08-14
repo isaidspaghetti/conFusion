@@ -9,7 +9,7 @@
     "lite": "lite-server",
     "scss": "node-sass -o css/ css/",
     "watch:scss": "onchange \"css/*.scss\" -- npm run scss",
-    "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\""
+    "watch:all": "npm run lite & npm run watch:scss"
   },
   "author": "Taylor Graham",
   "license": "ISC",
