@@ -365,3 +365,28 @@ And Modify the first scripts line to be:
     "scripts": {
         "start": "npm run watch:all",
 </in>
+~~~~~~~Distribution Folders~~~~~~~~
+    Set up a folder to contain entire sit delivered to user's browser, call it dist
+ <<<<<<<<<TO: "CLEAN FILES">>>>>>>>>>>>>
+        npm install --save-dev rimraf
+        Add script to package.json: "clean": "rimraf dist"
+        npm run clean ->deletes the dist folder
+ <remember to add dist to the gitignore.git file></remember>
+<<<<<<<<<TO: "COPY FILES">>>>>>>>>>>>>
+        sudo npm -g install copyfiles <windows does not need the "sudo" part>
+        Add script: "copyfonts": "copyfiles -f node_modes/font-awesome/fonts/* dist/fonts"
+            <copies font awesome files to the dist folder>
+        npm run copyfonts-> creates a folder named dist that contains font files    
+<<<<<<<<<TO: "COMPRESS IMAGES">>>>>>>>>>>>>    
+        sudo npm install -g imagemin-cli <on MAC sometimes you must add: "--unsafe-perm=true --allow-root">
+        Add script: "imagemin img/* -o dist/img" <copies and compresses images from img folder to dist/img folder>
+<<<<<<<<<TO: "CONCATENATE FILES">>>>>>>>>>>>>
+        <to concatenate css and js files and put into a single folder>
+        npm install --save-dev usemin-cli cssmin uglifyjs htmlmin>
+        Add comments to html files to indicate which css and js filese to minimize
+            <!-- build:css css/main.css --> <!-- endbuild -->
+            <!-- build:js js/main.js --> <!-- endbuild -->
+        Add scripts:
+            "usemin": "usemin contactus.html -d dist --htmlmin -o dist/contactus.html && usemin aboutus.html -d dist --htmlmin -o aboutus.html && usemin index.html -d dist --htmlmin -o index.html"
+            "build": "npm run clean && npm run copyfonts && npm run imgmin && npm run usemin"
+                <!-- The build script just runs other scripts as a batch -->
