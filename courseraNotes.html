@@ -390,3 +390,14 @@ And Modify the first scripts line to be:
             "usemin": "usemin contactus.html -d dist --htmlmin -o dist/contactus.html && usemin aboutus.html -d dist --htmlmin -o aboutus.html && usemin index.html -d dist --htmlmin -o index.html"
             "build": "npm run clean && npm run copyfonts && npm run imgmin && npm run usemin"
                 <!-- The build script just runs other scripts as a batch -->
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~TASK RUNNERS GRUNT GULP~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Grunt: configuraiton over code, Gulp: coe over configuration.
+        sudo npm install -g grunt-cli
+        npm install grunt --save-dev
+        create gruntfile.js
+        npm install --save-dev grunt-sass
+        npm install --save-dev time-grunt jit-grunt <!-- shows time  -->
+    watch and serve:
+            npm install --save-dev grunt-contrib-watch grunt-browser-sync
